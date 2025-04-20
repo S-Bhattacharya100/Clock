@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    background-color: rgb(194, 209, 207);
+}
+
+.clock-container {
+    background-image: url(pngtree-black-clock-no-hand-png-image_3975499.png);
+    margin: auto;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    height: 60vmin;
+    width: 60vmin;
+    border-radius: 100%;
+    position: relative;
+}
+
+.hour-hand {
+    background-color: black;
+    height: 20%;
+    width: 2%;
+    position: absolute;
+    left: 203px;
+    top: 124px;
+    transform-origin: 50% 100%;
+}
+
+.minute-hand {
+    background-color: black;
+    position: absolute;
+    top: 91px;
+    height: 28%;
+    width: 1%;
+    left: 205px;
+    transform-origin: 50% 100%;
+}
+
+.second-hand {
+    background-color: black;
+    position: absolute;
+    height: 25%;
+    width: 2px;
+    left: 206px;
+    top: 116px;
+    transform-origin: 50% 88%;
+}
