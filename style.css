@@ -7,47 +7,78 @@
 body {
     min-height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(194, 209, 207);
+    overflow: hidden;
 }
 
 .clock-container {
-    background-image: url(pngtree-black-clock-no-hand-png-image_3975499.png);
-    margin: auto;
-    background-size: 100% 100%;
+    background-image: url('https://ik.imagekit.io/7de5cntkw/pngtree-black-clock-no-hand-png-image_3975499.png?updatedAt=1745127746376');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    border: 2px solid black;
     height: 60vmin;
     width: 60vmin;
-    border-radius: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    min-width: 250px;
+    min-height: 250px;
+    border-radius: 50%;
     position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    border-radius: 2px;
 }
 
 .hour-hand {
     background-color: black;
     height: 20%;
-    width: 2%;
-    position: absolute;
-    left: 203px;
-    top: 124px;
-    transform-origin: 50% 100%;
+    width: 1.5%;
+    min-width: 4px;
+    transform: translateX(-50%);
 }
 
 .minute-hand {
     background-color: black;
-    position: absolute;
-    top: 91px;
     height: 28%;
     width: 1%;
-    left: 205px;
-    transform-origin: 50% 100%;
+    min-width: 3px;
+    transform: translateX(-50%);
 }
 
 .second-hand {
+    background-color: red;
+    height: 30%;
+    width: 0.5%;
+    min-width: 2px;
+    transform: translateX(-50%);
+}
+
+.center-dot {
     background-color: black;
+    height: 2%;
+    width: 2%;
+    min-width: 8px;
+    min-height: 8px;
+    border-radius: 50%;
     position: absolute;
-    height: 25%;
-    width: 2px;
-    left: 206px;
-    top: 116px;
-    transform-origin: 50% 88%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 480px) {
+    .clock-container {
+        height: 80vmin;
+        width: 80vmin;
+        min-width: 200px;
+        min-height: 200px;
+    }
 }
